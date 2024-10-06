@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import { moneyFormat } from '../Helpers';
 
 const Product = ({ product, basket, setBasket, total, money }) => {
 
@@ -33,12 +34,13 @@ const Product = ({ product, basket, setBasket, total, money }) => {
     }
     return (
         <div className="product">
+            <img src={product.image} alt="" />
             <h6>{product.title}</h6>
-            <div className='price'>${product.price}</div>
+            <div className='price'>${moneyFormat(product.price)}</div>
             <div className="actions">
-                <button disabled={!basketItem} onClick={removeBasket}>Çıkart</button>
+                <button className="btn1" disabled={!basketItem} onClick={removeBasket}>Sat</button>
                 <span className="amount">{basketItem && basketItem.amount || 0}</span>
-                <button disabled={total + product.price > money} onClick={addBasket}>Ekle</button>
+                <button className="btn2" disabled={total + product.price > money} onClick={addBasket}>Satın Al</button>
             </div>
         </div>
     )
@@ -48,7 +50,8 @@ Product.propTypes = {
     product: PropTypes.shape({
         title: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,
-        id: PropTypes.number.isRequired
+        id: PropTypes.number.isRequired,
+        image: PropTypes.string.isRequired
     }).isRequired,
     basket: PropTypes.array.isRequired,
     setBasket: PropTypes.func.isRequired,

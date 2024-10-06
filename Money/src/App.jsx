@@ -22,13 +22,15 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <Header total={total} money={money} />
-      {products.map((product, index) => (
-        <Product key={index} total={total} money={money} basket={basket} setBasket={setBasket} product={product} />
-      ))}
+      <div className="container products">
+        {products.map((product, index) => (
+          <Product key={index} total={total} money={money} basket={basket} setBasket={setBasket} product={product} />
+        ))}
+      </div>
       {total > 0 && <Basket resetBasket={resetBasket} products={products} total={total} basket={basket} />}
-    </div>
+    </>
   );
 }
 

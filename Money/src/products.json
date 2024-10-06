@@ -9,13 +9,13 @@
     "id": 2,
     "title": "Kola",
     "price": 6,
-    "image": "https://ayb.akinoncdn.com/products/2019/01/18/1796/b792f041-5479-4d5f-a74e-233d5da474bc_size780x780_quality60_cropCenter.jpg"
+    "image": "https://cdn.metro-group.com/tr/tr_pim_510838001002_01.png?format=jpg&quality=50&w=594&h=594&bgcolor=white"
   },
   {
     "id": 3,
     "title": "Ayakkabı",
     "price": 400,
-    "image": "https://www.ayakkabicity.com/Uploads/UrunResimleri/buyuk/sanzelize-k-07-kadin-sneaker-ayakkabi-47cd.jpg"
+    "image": "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/b1bcbca4-e853-4df7-b329-5be3c61ee057/NIKE+DUNK+LOW+RETRO.png"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "id": 6,
     "title": "1 TL",
     "price": 0.12,
-    "image": "https://iasbh.tmgrup.com.tr/802b79/0/0/0/0/0/0?u=http://i.sabah.com.tr/sb/galeri/dunya/1-tlnin-diger-ulke-paralari-karsisindaki-degeri/1.jpg"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4kjrh9ukyebW3GctMauCyE21_ebSPiY8R3A&s"
   },
   {
     "id": 7,
@@ -51,13 +51,13 @@
     "id": 9,
     "title": "Çanta",
     "price": 1500000,
-    "image": "https://www.flowerayakkabi.com/Uploads/UrunResimleri/buyuk/beyaz-deri-sirt-cantasi-2a20.jpg"
+    "image": "https://sporthink.mncdn.com/mnresize/1080/1080/sporthink/uploads/products/original_144679_1.jpeg"
   },
   {
     "id": 10,
     "title": "Elmas",
     "price": 157878777,
-    "image": "https://lh3.googleusercontent.com/proxy/kYXnJp3Y4l3F0LzGR-RmZpuB_mDzYE76hH9sHH7Z49yJmE419VLne-7yMX7cDQ4BOcPqGgkqkvuLZiiDy-7HP2R4WNIclWhId9pT"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjptVpI4wfmGu-CSwmJF2L-DculK8YeTy7Sg&s"
   },
   {
     "id": 11,
@@ -69,6 +69,6 @@
     "id": 12,
     "title": "Ekmek",
     "price": 0.1,
-    "image": "https://migros-dali-storage-prod.global.ssl.fastly.net/sanalmarket/product/05120000/05120000-a957e2.jpg"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDXkSu9HGLSHirKcPBiPMrjBVEjow_spiMFA&s"
   }
 ]
