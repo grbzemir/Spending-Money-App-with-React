@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-const Product = ({ product, basket, setBasket }) => {
+const Product = ({ product, basket, setBasket, total, money }) => {
+
+    const basketItem = basket.find(item => item.id === product.id)
 
 
     const addBasket = () => {
@@ -18,14 +20,25 @@ const Product = ({ product, basket, setBasket }) => {
             }])
         }
     }
+
+    const removeBasket = () => {
+        const currentBasket = basket.find(item => item.id === product.id)
+        const basketWithoutCurrent = basket.filter(item => item.id !== product.id)
+        currentBasket.amount -= 1
+        if (currentBasket.amount === 0) {
+            setBasket([...basketWithoutCurrent])
+        } else {
+            setBasket([...basketWithoutCurrent, currentBasket])
+        }
+    }
     return (
         <div className="product">
             <h6>{product.title}</h6>
             <div className='price'>${product.price}</div>
             <div className="actions">
-                <button>Sat</button>
-                <span className="amount">0</span>
-                <button onClick={addBasket}>Satın Al</button>
+                <button disabled={!basketItem} onClick={removeBasket}>Çıkart</button>
+                <span className="amount">{basketItem && basketItem.amount || 0}</span>
+                <button disabled={total + product.price > money} onClick={addBasket}>Ekle</button>
             </div>
         </div>
     )
@@ -38,7 +51,9 @@ Product.propTypes = {
         id: PropTypes.number.isRequired
     }).isRequired,
     basket: PropTypes.array.isRequired,
-    setBasket: PropTypes.func.isRequired
+    setBasket: PropTypes.func.isRequired,
+    total: PropTypes.number.isRequired,
+    money: PropTypes.number.isRequired
 };
 
 export default Product
