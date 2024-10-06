@@ -6,15 +6,18 @@ const Basket = ({ basket, total, products, resetBasket }) => {
 
     return (
         <>
-            {basket.map(item =>
-            (
-                <BasketItem key={item.id} item={item} product={products.find(p => p.id == item.id)} />
-            ))}
+            <div className="basket-container">
+                <h3>Alışveriş Detayları</h3>
+                {basket.map(item =>
+                (
+                    <BasketItem key={item.id} item={item} product={products.find(p => p.id == item.id)} />
+                ))}
 
-            <div>
-                Toplam: ${total}
+                <div className="total">
+                    Toplam: ${total}
+                </div>
+                <button className="btn3" onClick={resetBasket}>Sepeti Sıfırla</button>
             </div>
-            <button onClick={resetBasket}>Sepeti Sıfırla</button>
         </>
     )
 }

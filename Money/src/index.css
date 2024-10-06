@@ -103,6 +103,11 @@ code {
 
 }
 
+.actions button[disabled] {
+    opacity: .3;
+    cursor: not-allowed;
+}
+
 /* button:hover {
     background-color: #0056b3;
 } */
@@ -133,4 +138,41 @@ code {
 .header span {
     margin: 0 10px;
     font-weight: bold;
+}
+
+.basket-container {
+    width: 1000px;
+    /* Genişlik belirle */
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 auto;
+    /* Yatayda ortalar */
+}
+
+.basket-container h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+.basket-container .total {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+
+}
+
+.basket-container .btn3 {
+    background-color: #61dafb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
 }
