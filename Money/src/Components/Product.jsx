@@ -6,7 +6,17 @@ const Product = ({ product, basket, setBasket }) => {
 
     const addBasket = () => {
 
-        setBasket([...basket, product]);
+        const checkBasket = basket.find(item => item.id === product.id)
+        //ürün daha önce eklenmişse
+        if (checkBasket) {
+            checkBasket.amount += 1
+            setBasket([...basket.filter(item => item.id !== product.id), checkBasket])
+        } else {
+            setBasket([...basket, {
+                id: product.id, amount: 1
+
+            }])
+        }
     }
     return (
         <div className="product">
@@ -24,7 +34,8 @@ const Product = ({ product, basket, setBasket }) => {
 Product.propTypes = {
     product: PropTypes.shape({
         title: PropTypes.string.isRequired,
-        price: PropTypes.number.isRequired
+        price: PropTypes.number.isRequired,
+        id: PropTypes.number.isRequired
     }).isRequired,
     basket: PropTypes.array.isRequired,
     setBasket: PropTypes.func.isRequired
