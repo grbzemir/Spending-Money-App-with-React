@@ -5,6 +5,7 @@ const BasketItem = ({ item, product }) => {
     return (
         <div>
             {product.title} x {item.amount}
+            {/* {product.price * item.amount} */}
         </div>
     )
 }
