@@ -18,6 +18,7 @@ const Basket = ({ basket, total, products, resetBasket }) => {
                 </div>
                 <button className="btn3" onClick={resetBasket}>Sepeti Sıfırla</button>
             </div>
+
         </>
     )
 }
